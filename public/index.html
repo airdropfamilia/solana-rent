@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Redeem token rental fees seamlessly and securely on the Solana blockchain. Fast, transparent, and user-friendly.">
+    <meta name="Dr Airdrop" content="Dr Airdrop">
+    <meta property="og:title" content="Solana Rental Fee Redemption">
+    <meta property="og:url" content="https://solana-rent.drairdrop.com/">
+
+    <title>Solana Token Account Manager</title>
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+    <style>
+        /* Solana theme colors */
+        body {
+            background-color: #13131a;
+            color: #e5e5e5;
+            font-family: 'Arial', sans-serif;
+        }
+        h1 {
+            color: #9945ff;
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #14f195;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #00c2a4;
+        }
+        .card {
+            background-color: #1e1e2a;
+            border: none;
+            border-radius: 8px;
+        }
+        .card-header {
+            background-color: #242435;
+            color: #14f195;
+            font-weight: bold;
+        }
+        .card-body {
+            color: #e5e5e5;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #a3a3a3;
+            font-size: 14px;
+        }
+        .logo {
+            width: 50px;
+        }
+        #loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <div class="text-center">
+            <img src="/solanaLogoMark.png" alt="Solana Logo" class="logo mb-2">
+            <h1>Solana Token Account Manager</h1>
+<p>
+    <b>Unlock your hidden SOL today!</b> 
+    Your unused token accounts could be holding <b>hundreds</b> or even <b>thousands</b> of dollars in unclaimed rent. 
+    <b>Connect your wallet now</b> to reclaim what's yours — don't let it go to waste!
+</p>
+<p>
+    Each unused token account holds a rent deposit of about <b>0.002 SOL</b>. 
+    By closing these accounts, you can <b>reclaim that rent directly to your wallet</b>. 
+    We charge a small <b>1% service fee</b> on reclaimed amounts and a minimal network fee of <b>0.000005 SOL</b> per transaction.
+</p>
+
+
+            <div id="loading-spinner" style="display: none; text-align: center; margin-top: 20px;">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+        </div>
+            <div id="status-message" class="mt-4">
+            <!-- Accounts will be displayed here -->
+
+
+        </div>
+
+
+
+        <div class="text-center mb-4">
+            <button id="connectWallet" class="btn btn-primary btn-lg">Connect Wallet</button>
+            <button id="searchAbandoned" class="btn btn-secondary btn-lg" disabled>Search Abandoned Accounts</button>
+            <button id="redeemSelected" class="btn btn-danger btn-lg" disabled>Redeem Selected</button>
+        </div>
+        <div id="accounts" class="mt-4">
+     
+            <!-- Accounts will be displayed here -->
+        </div>
+    </div>
+
+    <div class="footer">
+        Made with 💜 on Solana. Reclaim your unclaimed SOL today!
+        We charge a 1% fee on all transactions
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@^1.41.0/lib/index.iife.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@solana/spl-token@^0.2.0/lib/index.iife.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
